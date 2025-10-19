@@ -70,7 +70,7 @@ class User(db.Model):
         db.session.commit()
         return done
    
-   def get_user(username):
+    def get_user(username):
        if vuln:  # SQLi Injection
            user_query = f"SELECT * FROM users WHERE username = '{username}'"
            query = db.session.execute(text(user_query))
