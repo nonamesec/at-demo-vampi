@@ -79,9 +79,9 @@ class User(db.Model):
                fin_query = '{"username": "%s", "email": "%s"}' % (ret[1], ret[3])
            else:
                fin_query = None
-      else:
-          fin_query = User.query.filter_by(username=username).first()
-      return fin_query
+       else:
+           fin_query = User.query.filter_by(username=username).first()
+       return fin_query
         
     @staticmethod
     def register_user(username, password, email, admin=False):
